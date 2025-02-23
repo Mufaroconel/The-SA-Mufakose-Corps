@@ -21,13 +21,13 @@ export interface Fellowship {
 const fellowshipData: Fellowship[] = [
   {
     id: "mens-fellowship",
-    name: "Men's Fellowship",
+    name: "Men's Ministries",
     description:
       "A brotherhood of faith, supporting each other in spiritual growth and Christian service.",
     image:
       "https://images.unsplash.com/photo-1511994714008-b6d68a8b32a2?auto=format&fit=crop&w=1600&q=80",
     leader: "Brother James Anderson",
-    meetingTime: "Every 2nd Saturday, 8:00 AM",
+    meetingTime: "Wednesday 1800-1930",
     members: 45,
     events: [
       {
@@ -44,13 +44,13 @@ const fellowshipData: Fellowship[] = [
   },
   {
     id: "womens-fellowship",
-    name: "Women's Fellowship",
+    name: "Young Men's Fellowship",
     description:
       "Empowering women through faith, fellowship, and service to make a difference in our community.",
     image:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80",
     leader: "Sister Mary Thompson",
-    meetingTime: "Every 2nd Sunday, 2:00 PM",
+    meetingTime: "Saturday 1800-1930",
     members: 60,
     events: [
       {

@@ -6,15 +6,18 @@ import DailyVerse from "./components/DailyVerse";
 import UpcomingEvents from "./components/UpcomingEvents";
 import CommunityFeed from "./components/CommunityFeed";
 import Footer from "./components/Footer";
-import About from "./components/About"; // Corrected import path
+import About from "./components/About"; 
 import Brigadespage from "./components/Brigades/Brigadespage";
 import BrigadeDetailPage from "./components/Brigades/Brigadesdetailpage";
 import FellowshipsPage from "./components/Fellowships/Fellowshipspage";
 import FellowshipDetailPage from "./components/Fellowships/FellowshipsDetailPage";
 import SermonsPage from "./components/Sermons/SermonsPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminDashboard from "./pages/admin/dashboard";
+import Login from './pages/login';
 
 // const Brigades = () => <div className="pt-20">Brigades Page</div>;
-// const Fellowship = () => <div className="pt-20">Fellowship Groups Page</div>;
+// const Fellowship = () => <div className="pt-20"> Fellowship Groups Page</div>;
 // const Sermons = () => <div className="pt-20">Sermons Page</div>;
 const Events = () => <div className="pt-20">Events Page</div>;
 const Contact = () => <div className="pt-20">Contact Page</div>;
@@ -49,10 +52,20 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/brigades" element={<Brigadespage />} />
             <Route path="/fellowship" element={<FellowshipsPage />} />
+            <Route path="/fellowship/:id" element={<FellowshipDetailPage />} />
             <Route path="/sermons" element={<SermonsPage />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/brigades/:id" element={<BrigadeDetailPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route 
+              path="/admin/*" 
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } 
+            />
           </Routes>
         </main>
         <Footer />
