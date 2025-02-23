@@ -11,6 +11,7 @@ const navItems = [
   { name: 'Sermons', path: '/sermons' },
   { name: 'Events', path: '/events' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Login', path: '/login'},
 ];
 
 const Navbar = () => {
@@ -38,7 +39,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Church className={`h-8 w-8 ${scrolled ? 'text-red-600' : 'text-white'}`} />
             <span className={`font-bold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-              Salvation Army Mufakose
+              The Salvation Army Mufakose
             </span>
           </Link>
 
